@@ -1,0 +1,26 @@
+# Site settings
+name: FileThings 文件那些事儿
+author: 穿卡芦苇
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+email: nodewee@gmail.com
+weibo_username: nodewee
+twitter_username:
+github_username: nodewee
+github_project_url: https://github.com/NodeWee/FileThings
+
+# Build settings
+markdown: kramdown
+
+exclude: [CNAME, README.md,_site/,.jekyll-cache/]
+
+
+
+# for blog settings - start
+permalink: /:title.html
+lsi: true #为相关文章生成索引
+plugins:
+ - jekyll-sitemap
+ - jekyll-feed

@@ -1,0 +1,44 @@
+---
+layout: post/default
+---
+
+<article>
+  <section class="title">
+    <h2>{{ page.title }} </h2>
+  </section>
+  <section class="meta">
+    <span class="time">
+      <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+    </span>
+    {% if page.tags %}
+    <span class="tags">
+      {% for tag in page.tags %}
+      <a href="/tags.html#{{ tag }}" title="{{ tag }}">#{{ tag }}</a>
+      {% endfor %}
+    </span>
+
+    {% endif %}
+  </section>
+  <section class="post">
+    {{ content }}
+  </section>
+
+
+
+  <div class="divider">
+    <span>
+      {% if page.previous %}
+      <a href="{{ BASE_PATH }}{{ page.previous.url }}"
+        title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a>
+      {% endif %}
+    </span>
+    <span><i class="fa fa-circle"></i></span>
+    <span>
+      {% if page.next %}
+      <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}"> {{ page.next.title }} &rarr;</a>
+      {% endif %}
+    </span>
+  </div>
+
+
+</article>

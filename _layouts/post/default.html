@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="{{ site.author }}" />
+  {% if page.title %}
+  <title>{{ page.title }} - {{ site.name }}</title>
+  {% else %}
+  <title>{{ site.name }}</title>
+  {% endif %}
+  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <link rel="stylesheet" href="/static/post/css/style.css">
+  <link rel="stylesheet" href="/static/post/css/github.css">
+  <link rel="stylesheet" href="/static/post/css/fontawesome.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/static/post/js/highlight.pack.js"></script>
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<body>
+  <div id="main" role="main">
+    <header>
+      <div id="header">
+        <h1><a title="{{ site.name }}" class="" href="/">{{ site.name }}</a></h1>
+      </div>
+      <nav>
+        {% for nav in site.navigations %}
+        <span><a title="{{ nav.title }}" href="{{ nav.href }}"><i class="{{ nav.class }}"></i></a></span>
+        {% endfor %}
+      </nav>
+    </header>
+    <div id="content">
+      {{ content }}
+    </div>
+    <footer>
+      <div>
+        {% assign first_post = site.posts | last %}
+        <p>&copy; {{ first_post.date | date: "%Y" }} ~ {{ site.time | date: "%Y" }} {{ site.author }}</p>
+        <p><a href="/">FileThing 文件那些事儿</a></p>
+      </div>
+    </footer>
+  </div> <!-- main -->
+
+  <div style="display:none;">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141020238-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141020238-1');
+    </script>
+  </div>
+
+
+</body>
+
+</html>
