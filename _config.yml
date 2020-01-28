@@ -14,7 +14,8 @@ github_project_url: https://github.com/NodeWee/FileThings
 # Build settings
 markdown: kramdown
 
-exclude: [CNAME, README.md,_site/,.jekyll-cache/]
+
+exclude: [CNAME, README.md]
 
 
 

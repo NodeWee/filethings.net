@@ -1,14 +1,10 @@
 @charset "UTF-8";
 /*------------------------------------
  * sext-vi
- *
  * @author linghua.zhang@me.com
- * @link https://lhzhang.com/
- * @update 2014-03-17
- *
- * |/ | (~ (~
- * |\.|._)._)
- * --------------------------------- */
+/*------------------------------------
+ Update: 2020 @nodewee
+* --------------------------------- */
 @import url(/static/post/fonts/telex-regular.css);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 * {
@@ -46,21 +42,25 @@ a, header #header h1 a, article .title a, article .meta .tags a, article .divide
   a:hover, header #header h1 a:hover, article .title a:hover, article .meta .tags a:hover, article .divider a:hover {
     color: #dd1144; }
 
-blockquote, pre code {
-  background-color: #f8f8f8;
-  padding: 0 1em;
-  border: 1px dashed #eee !important;
-  border-color: #e0e0e0 !important;
-  font-size: 13px;
-  line-height: 1.6;
-  display: block;
-  overflow: auto; }
+blockquote {
+  color: #999;
+  margin: 0 0 0 1em;
+  padding: 0 0 0 1em;
+  font-size: small;
+  border-left: 3px solid #eee;
+  overflow: auto; 
+}
+
 
 code {
-  background-color: #f8f8f8;
-  padding: 2px 5px;
-  border: 1px dashed #e0e0e0;
-  font-family: "Ubuntu", monospace; }
+  background-color: #f2f2f2;
+  color: #555577;
+}
+
+pre code {
+  font-size: small;
+}
+
 
 h1, h2 {
   font-size: 1.4em; }
