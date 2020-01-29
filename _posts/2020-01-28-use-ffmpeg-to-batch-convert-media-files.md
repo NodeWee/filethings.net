@@ -1,22 +1,28 @@
 ---
-title: '用 FFMPEG 批量转换媒体（视频、音频）文件'
 layout: post/post
+title: 用 FFMPEG 批量转换媒体（视频、音频）文件
+uuid: 4AD174FA-1E36-4D92-ACE7-63FC02FA5D6B
 tags: 
-    - FFMPEG
-    - 转换文件
+ - FFMPEG
+ - 转换文件
 ---
+> 最后更新于：2020-01-29
+
+
+
+
 
 ## &para;
 
 `FFmpeg` 是一个开源免费跨平台的视频和音频流方案。可以通过命令行直接调用来处理媒体文件。  
-FFmpeg 的安装，可参考其官方网站：[https://ffmpeg.org/](https://ffmpeg.org/)  
+FFmpeg 的安装，可参考其官方网站：[https://ffmpeg.org/](https://ffmpeg.org/)
 
 
 ## &para; macOS 下批量转换视频、音频媒体文件
 
 ### 方法一，直接在终端输入命令
 
-示例:  
+示例:
 ```shell
 for f in `ls *.aiff`; do ffmpeg -i "$f" "${f/%.aiff/.mp3}";done
 ```
@@ -32,3 +38,5 @@ for f in `ls *.aiff`; do ffmpeg -i "$f" "${f/%.aiff/.mp3}";done
 [💻源码](https://github.com/NodeWee/macOS-Workflow/blob/master/ffmpeg-batch-converter.sh)  
 
 使用方法： 通过命令行运行 `bash ffmpeg-batch-converter.sh`
+
+
