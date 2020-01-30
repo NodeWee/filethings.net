@@ -44,6 +44,7 @@ a, header #header h1 a, article .title a, article .meta .tags a, article .divide
 
 blockquote {
   color: #999;
+  line-height: 0.9em;
   margin: 0 0 0 1em;
   padding: 0 0 0 1em;
   font-size: small;
@@ -62,8 +63,17 @@ pre code {
 }
 
 
-h1, h2 {
-  font-size: 1.4em; }
+h1{
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.4em;
+}
+
+
+article .post{
+  font-size: 1.1em;
+}
 
 time {
   font-family: "Ubuntu", monospace; }
