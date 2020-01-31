@@ -25,3 +25,8 @@ lsi: true #为相关文章生成索引
 plugins:
  - jekyll-sitemap
  - jekyll-feed
+
+ # plugins config
+jekyll-minifier:
+  exclude: ["*.xml", "*.txt"]
+  #more settings: https://github.com/digitalsparky/jekyll-minifier
